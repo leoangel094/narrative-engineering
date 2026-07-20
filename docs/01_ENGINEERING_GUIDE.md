@@ -16,179 +16,186 @@
 
 # Purpose
 
-Este documento define la metodología utilizada para construir y mantener este proyecto.
+Este documento define la metodología utilizada para desarrollar **Narrative Engineering**.
 
-Su objetivo es establecer un proceso de desarrollo claro, repetible y escalable que permita diseñar un universo de forma coherente a lo largo del tiempo.
+Su propósito es establecer un proceso de trabajo claro, consistente y escalable que permita construir un universo de forma ordenada a lo largo del tiempo.
 
-Todo el contenido del proyecto deberá seguir las convenciones descritas en esta guía.
+Toda decisión relacionada con la forma de trabajar deberá documentarse en este archivo.
 
 ---
 
 # What is Narrative Engineering?
 
-Narrative Engineering es una metodología para diseñar universos narrativos utilizando principios propios de la ingeniería de software.
+Narrative Engineering es una metodología para construir universos narrativos utilizando principios de ingeniería de software.
 
-En lugar de construir una historia de forma improvisada, el universo se desarrolla mediante procesos documentados, decisiones deliberadas y una arquitectura organizada.
+En lugar de improvisar una historia, el universo se desarrolla mediante documentación, procesos definidos y decisiones deliberadas.
 
 El objetivo no consiste únicamente en escribir ficción.
 
-Consiste en diseñar un sistema capaz de sostener múltiples historias sin perder coherencia.
+El objetivo consiste en **ingenierizar un universo**.
+
+---
+
+# Documentation Architecture
+
+La documentación del proyecto sigue dos principios fundamentales.
+
+## Single Responsibility
+
+Cada documento responde una única pregunta.
+
+## Single Source of Truth
+
+Cada tipo de conocimiento posee un único lugar oficial donde vivir.
+
+La siguiente tabla define la responsabilidad de cada documento del proyecto.
+
+| Document | Responsibility |
+|----------|----------------|
+| README | ¿Qué es este proyecto? |
+| PROJECT_CHARTER | ¿Por qué existe este proyecto? |
+| ENGINEERING_GUIDE | ¿Cómo se desarrolla este proyecto? |
+| AI_COLLABORATION | ¿Cómo debe colaborar una IA? |
+| AI_SESSION_LOG | ¿Qué se discutió durante el desarrollo? |
+| Git History | ¿Qué cambió en el repositorio? |
+
+Ningún documento deberá duplicar información perteneciente a otro.
+
+Antes de agregar contenido a un documento deberá verificarse que dicho documento sea la fuente oficial para ese tipo de conocimiento.
 
 ---
 
 # Engineering Principles
 
-Todo el desarrollo del proyecto deberá respetar los siguientes principios.
-
-## Single Responsibility
-
-Cada documento debe tener un único propósito.
-
-Cada archivo debe responder una única pregunta importante.
-
----
+Toda actividad realizada dentro del proyecto deberá respetar los siguientes principios.
 
 ## Documentation First
 
-Las decisiones importantes deberán documentarse antes de formar parte del canon.
+Las decisiones importantes deberán documentarse antes de implementarse.
 
-La documentación es parte del producto.
-
----
-
-## Canon First
-
-Nada pertenece oficialmente al universo hasta formar parte del Canon.
-
-Las ideas no son Canon.
-
-Los borradores no son Canon.
-
-Las conversaciones no son Canon.
-
----
-
-## Consistency Over Creativity
-
-La creatividad nunca deberá romper la coherencia del universo.
-
-Una buena idea que contradice el canon deberá modificarse o descartarse.
+La documentación forma parte del producto.
 
 ---
 
 ## Incremental Development
 
-El universo crecerá mediante pequeñas decisiones bien documentadas.
+El proyecto evolucionará mediante pequeños avances bien definidos.
 
-No se diseñará todo desde el principio.
+Cada commit deberá representar una mejora concreta.
 
-El proyecto evolucionará de manera iterativa.
+---
+
+## Consistency Over Creativity
+
+La creatividad nunca deberá comprometer la coherencia del proyecto.
+
+---
+
+## Long-Term Thinking
+
+Toda decisión deberá tomarse pensando en la evolución del proyecto y no únicamente en las necesidades inmediatas.
+
+---
+
+## Traceability
+
+Toda decisión importante deberá poder rastrearse a través de la documentación y el historial del proyecto.
 
 ---
 
 # Development Workflow
 
-Toda nueva idea deberá seguir el siguiente proceso.
+Toda nueva idea seguirá el siguiente flujo de trabajo.
 
 ```text
 Idea
     │
     ▼
-Discusión
-    │
-    ▼
-Investigación
+Análisis
     │
     ▼
 Documentación
     │
     ▼
-Validación
-    │
-    ▼
-Canon
-    │
-    ▼
-Narrativa
+Implementación
 ```
 
-Ningún elemento deberá aparecer en una historia sin haber recorrido este flujo.
+Este flujo garantiza que las decisiones importantes sean analizadas antes de incorporarse al proyecto.
 
 ---
 
 # Repository Workflow
 
-Cada commit deberá representar una decisión importante del proyecto.
+El repositorio evolucionará mediante pequeños commits con un propósito claramente definido.
 
-No se realizarán commits ambiguos como:
+Cada commit deberá representar una decisión o un avance concreto.
 
-- Update
-- Changes
-- More work
-- Fix
-
-Cada commit deberá explicar claramente qué cambió y por qué.
+Se evitarán commits ambiguos o excesivamente grandes.
 
 ---
 
-# Conventional Commits
+# Commit Convention
 
-Este proyecto utiliza el estándar **Conventional Commits** adaptado al desarrollo de un universo narrativo.
+Este proyecto utiliza el estándar **Conventional Commits**.
 
-## Types
+## Commit Header
 
-| Type | Uso |
-|------|-----|
-| feat | Nueva funcionalidad del proyecto o nuevo elemento importante del universo. |
-| docs | Cambios en la documentación. |
-| fix | Corrección de errores o inconsistencias. |
-| refactor | Reorganización sin cambiar el significado del contenido. |
-| style | Cambios de formato o estilo. |
-| chore | Configuración, estructura o mantenimiento del repositorio. |
+El encabezado del commit deberá escribirse en inglés.
 
----
-
-## Examples
+Formato:
 
 ```text
-feat(project): initialize narrative engineering framework
+type(scope): summary
+```
 
-docs(charter): improve project philosophy
+Ejemplo:
 
-feat(history): create ancient civilizations
+```text
+feat(project): initialize narrative engineering
+```
 
-feat(culture): define northern tribes
+---
 
-fix(history): resolve chronological inconsistency
+## Commit Body
 
-refactor(canon): reorganize political documentation
+La descripción del commit deberá escribirse en español.
+
+Su objetivo es explicar claramente qué cambió y por qué.
+
+Ejemplo:
+
+```text
+feat(project): initialize narrative engineering
+
+Se establece la estructura inicial del proyecto.
+
+- Se crea el README.
+- Se incorpora el PROJECT_CHARTER.
+- Se agrega el ENGINEERING_GUIDE.
+- Se documenta la metodología inicial.
 ```
 
 ---
 
 # Branch Strategy
 
-Las ramas deberán representar una línea de trabajo claramente identificable.
+Las ramas deberán utilizar nombres descriptivos en inglés.
 
 Ejemplos:
 
 ```text
-feature/history
-
-feature/religions
-
-feature/politics
-
 feature/world
+
+feature/history
 
 feature/cultures
 
-feature/fantastic-system
+feature/politics
 
-feature/characters
+feature/religions
 ```
 
-La rama `main` siempre representará la versión oficial del proyecto.
+La rama `main` siempre representará el estado oficial del proyecto.
 
 ---
 
@@ -198,73 +205,49 @@ Este proyecto utiliza dos idiomas de forma intencional.
 
 ## English
 
-Se utiliza para:
+Se utilizará para:
 
 - nombres de archivos
 - nombres de carpetas
-- títulos
+- títulos de documentos
 - ramas
-- commits
-- estructura documental
+- commits (encabezado)
 - términos técnicos
 
 ## Español
 
-Se utiliza para:
+Se utilizará para:
 
 - documentación
-- comentarios
 - explicaciones
-- decisiones
+- comentarios
 - contenido creativo
 - worldbuilding
+- commits (descripción)
 
 ---
 
 # Documentation Principles
 
-Todo documento deberá cumplir las siguientes reglas.
+Toda documentación deberá cumplir las siguientes reglas.
 
 - Tener una única responsabilidad.
 - Evitar información duplicada.
 - Mantener una estructura consistente.
 - Escribirse pensando en el largo plazo.
-- Poder comprenderse de forma independiente.
-
----
-
-# Decision Process
-
-Antes de incorporar cualquier idea al proyecto deberán responderse, como mínimo, las siguientes preguntas.
-
-- ¿Qué problema resuelve?
-- ¿Por qué existe?
-- ¿Qué consecuencias produce?
-- ¿Cómo afecta al resto del universo?
-- ¿Es coherente con el canon?
-- ¿Puede mantenerse a largo plazo?
-
-Si una idea no puede responder estas preguntas, todavía no está lista para formar parte del proyecto.
-
----
-
-# Project Evolution
-
-Este proyecto evolucionará mediante pequeñas iteraciones.
-
-Cada nueva decisión deberá mejorar el universo sin comprometer su coherencia.
-
-El crecimiento del proyecto tendrá prioridad sobre la velocidad de desarrollo.
+- Ser comprensible de forma independiente.
 
 ---
 
 # Final Statement
 
-Narrative Engineering no busca acelerar la escritura.
+Narrative Engineering aplica principios de ingeniería al proceso creativo.
 
-Busca construir un universo capaz de sostener historias durante muchos años.
+La creatividad construye el universo.
 
-La documentación, el canon y la metodología forman parte del producto tanto como la propia narrativa.
+La documentación preserva su conocimiento.
+
+La metodología garantiza su evolución.
 
 ---
 
