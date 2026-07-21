@@ -118,7 +118,7 @@ La creatividad deberá estar al servicio de la consistencia.
 
 # Session Documentation
 
-Las conversaciones relevantes mantenidas con la IA deberán registrarse en `03_AI_SESSION_LOG.md`.
+Las conversaciones relevantes mantenidas con la IA deberán registrarse dentro de la carpeta `docs/ai-sessions/`, utilizando un archivo individual por cada sesión bajo el formato de nombre `YYYY-MM-DD-session-XXX.md`.
 
 El registro de sesiones documenta el proceso de trabajo.
 

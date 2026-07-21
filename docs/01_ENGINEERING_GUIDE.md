@@ -56,7 +56,7 @@ La siguiente tabla define la responsabilidad de cada documento del proyecto.
 | PROJECT_CHARTER | ¿Por qué existe este proyecto? |
 | ENGINEERING_GUIDE | ¿Cómo se desarrolla este proyecto? |
 | AI_COLLABORATION | ¿Cómo debe colaborar una IA? |
-| AI_SESSION_LOG | ¿Qué se discutió durante el desarrollo? |
+| AI Sessions | ¿Qué se discutió durante el desarrollo (por sesión)? |
 | Git History | ¿Qué cambió en el repositorio? |
 
 Ningún documento deberá duplicar información perteneciente a otro.
