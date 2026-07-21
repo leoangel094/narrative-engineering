@@ -136,33 +136,25 @@ Se evitarán commits ambiguos o excesivamente grandes.
 
 # Commit Convention
 
-Este proyecto utiliza el estándar **Conventional Commits**.
+El proyecto utiliza el estándar **Conventional Commits**.
 
-## Commit Header
-
-El encabezado del commit deberá escribirse en inglés.
-
-Formato:
+## Commit Structure
 
 ```text
 type(scope): summary
+
+Descripción del cambio en español.
 ```
 
-Ejemplo:
+### Rules
 
-```text
-feat(project): initialize narrative engineering
-```
+- El encabezado del commit deberá escribirse en inglés.
+- La descripción deberá escribirse en español.
+- Cada commit deberá representar una única decisión de ingeniería.
+- Un commit podrá modificar varios archivos siempre que pertenezcan al mismo cambio lógico.
+- Cambios no relacionados deberán registrarse en commits independientes.
 
----
-
-## Commit Body
-
-La descripción del commit deberá escribirse en español.
-
-Su objetivo es explicar claramente qué cambió y por qué.
-
-Ejemplo:
+### Example
 
 ```text
 feat(project): initialize narrative engineering
