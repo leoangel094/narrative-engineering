@@ -60,7 +60,7 @@ Para comprender correctamente el proyecto se recomienda seguir el siguiente orde
 2. `docs/00_PROJECT_CHARTER.md`
 3. `docs/01_ENGINEERING_GUIDE.md`
 4. `docs/02_AI_COLLABORATION.md`
-5. `docs/03_AI_SESSION_LOG.md`
+5. `docs/ai-sessions/`
 
 ---
 

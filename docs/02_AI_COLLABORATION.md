@@ -69,6 +69,7 @@ La IA no deberá:
 - asumir información no documentada
 - presentar hipótesis como hechos
 - convertir propuestas en decisiones oficiales
+- realizar cambios, crear o modificar archivos en el repositorio de manera directa sin antes haber consultado el análisis, presentado las sugerencias y recibido la autorización explícita del autor.
 
 Toda propuesta deberá ser validada por el autor antes de considerarse parte del proyecto.
 
@@ -118,11 +119,29 @@ La creatividad deberá estar al servicio de la consistencia.
 
 # Session Documentation
 
-Las conversaciones relevantes mantenidas con la IA deberán registrarse en `03_AI_SESSION_LOG.md`.
+Las conversaciones relevantes mantenidas con la IA deberán registrarse dentro de la carpeta `docs/ai-sessions/`, utilizando un archivo individual por cada sesión bajo el formato de nombre `YYYY-MM-DD-session-XXX.md`.
 
 El registro de sesiones documenta el proceso de trabajo.
 
 No constituye documentación oficial del universo ni reemplaza otras fuentes de información del proyecto.
+
+---
+
+# Authorization and Documentation Workflow
+
+Todo cambio o sugerencia de diseño sugerida por una inteligencia artificial debe respetar estrictamente el siguiente flujo colaborativo:
+
+1. **Análisis y Consulta Previa:** Antes de realizar cualquier cambio, la IA debe analizar el escenario, formular sus sugerencias o alternativas claras, y presentárselas al autor en la conversación para evaluarlas conjuntamente.
+2. **Evaluación Conjunta:** El autor y la IA evalúan las sugerencias sobre la consistencia y coherencia del universo.
+3. **Autorización Explícita:** La IA únicamente procederá a realizar o aplicar los cambios una vez que el autor haya otorgado su autorización explícita para el curso de acción elegido.
+4. **Registro Obligatorio de la Sesión:** Toda charla, debate, análisis y decisión acordada durante la sesión de trabajo deberá quedar registrada de manera obligatoria en un archivo de sesión individual dentro de la carpeta `docs/ai-sessions/`, asegurando la trazabilidad histórica del proyecto.
+
+## When to Record Sessions (Registration Moments)
+
+El registro de una sesión se activará de forma obligatoria en cualquiera de los siguientes dos casos:
+
+* **Por Finalización de Tema (Orden Temático):** Para evitar mezclar múltiples temas en un mismo archivo y facilitar la trazabilidad. Cuando la IA identifique que se han completado los cambios de un tema específico y se va a comenzar un tema nuevo, **la IA deberá informar proactivamente al autor y solicitarle autorización para registrar la sesión actual antes de avanzar**. La IA bajo ninguna circunstancia cerrará o creará el archivo de sesión de manera autónoma sin consultar.
+* **Por Fin de Jornada (Cierre de Trabajo):** Cuando el autor indique que la jornada de trabajo por hoy ha concluido. Este registro se realizará obligatoriamente para conservar los avances del día, incluso si el tema abordado no se ha culminado en su totalidad, permitiendo retomar con precisión en la siguiente jornada.
 
 ---
 
